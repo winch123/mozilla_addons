@@ -1,0 +1,9 @@
+#testexp-button{
+	width:40px;
+	height:40px;
+	background-color:#aa0000
+}
+
+#testexp-span{
+	user-select:text
+}

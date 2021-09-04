@@ -1,0 +1,49 @@
+{
+	"manifest_version":2,
+	"name":"Test extension",
+	"version":"1.0",
+
+	"description":"Testing some extension ...",
+	"icons":{
+		"64":"icons/icon-64.png",
+		"128":"icons/icon-128.png"
+	},
+
+	"applications":{
+		"gecko":{
+			"id":"testext@mozilla.org",
+			"strict_min_version":"48.0"
+		}
+	},
+
+	"content_scripts":[
+		{
+			"matches":[
+			  "https://yandex.ru/maps/*",
+			  "http://localhost/test.html"
+			],
+			"js":["jquery-3.5.1.min.js","Main_Page.js"]
+		}
+	],
+	"page_action":{
+		"default_icon":{
+			"64":"icons/icon-64.png",
+			"128":"icons/icon-128.png"
+		},
+		"default_title":"Test extension",
+		"default_popup":"button_popup.html",
+		"browser_style":true,
+	  	"show_matches":[
+		  "https://yandex.ru/maps/*",
+		  "http://localhost/*"
+		]
+	},
+
+	"background": {
+		"scripts": ["background.js"]
+	},
+	"permissions": [
+		"webRequest", "activeTab", "tabs", //"alarms","background","bookmarks","browserSettings","browsingData","clipboardRead","clipboardWrite","contentSettings","contextMenus","contextualIdentities","cookies","debugger","dns","downloads","downloads.open","find","geolocation","history","identity","idle","management","menus","menus.overrideContext","nativeMessaging","notifications","pageCapture","pkcs11","privacy","proxy","search","sessions","storage","tabHide","theme","topSites","unlimitedStorage","webNavigation","webRequest","webRequestBlocking",
+	  	"<all_urls>"
+	]	
+}

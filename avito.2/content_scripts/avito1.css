@@ -1,0 +1,9 @@
+
+#FixedFooter {background:black; width:100%; height:37px; position:fixed; bottom:0; padding:7px; z-index:1000; }
+#FixedFooter div { color:white; }
+#FixedFooter div#aa_t_add {font-weight:bold;}
+#FixedFooter div#aa_comment { position:absolute; right:0; background:#f3f8c8; padding:5px 22px; width:300px;}
+
+.WinchComment { font-weight:bold !important; font-size:0.8em; background: white; position:absolute; z-index:1; left:33px; top:5px; padding:3px !important; }
+
+button.MambaScan { float:left; margin: 11px 22px; }
